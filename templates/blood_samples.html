@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Blood Sample Data{% endblock %}
+{% block content %}
+
+<div class='container'>
+	<h1 style="color: white;">Blood Sample Features Form</h1>
+
+	<!-- Create Form -->
+	<form method="POST" id="blood-sample-form">
+
+		<!-- Details -->
+		<div class="form-control-blood-sample">
+			<label for="name" id="label-name">
+				<b>Name</b>
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name" name='name'
+				placeholder="Enter your name" required />
+		</div>
+
+		<div class="form-control-blood-sample">
+			<label for="age" id="label-age">
+				<b>Age</b>
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age" name='age'
+				placeholder="Enter your age" required />
+		</div>
+
+		<div class="form-control-blood-sample">
+			<label for="BUN" id="label-BUNvalue">
+				<b>Value Of BUN</b>
+			</label>
+			
+			<!-- Input Type Number -->
+			<input type="text"
+				id="BUN" name='BUN'
+				placeholder="Enter BUN Value" required />
+		</div>
+
+		<div class="form-control-blood-sample">
+			<label for="CrctProtein" id="label-CrctProteinvalue">
+				<b>Value Of CrctProtein</b>
+			</label>
+			
+			<!-- Input Type Number -->
+			<input type="text"
+				id="CrctProtein" name='CrctProtein'
+				placeholder="Enter CrctProtein Value" required />
+		</div>
+
+
+		<div class="form-control-blood-sample">
+			<label for="Creatinine" id="label-Creatininevalue">
+				<b>Value Of Creatinine</b>
+			</label>
+			
+			<!-- Input Type Number -->
+			<input type="text"
+				id="Creatinine" name="Creatinine" 
+				placeholder="Enter Creatinine Value" required/>
+		</div>
+
+		<div class="form-control-blood-sample">
+			<label for="Ddimer" id="label-Ddimervalue">
+				<b>Value Of Ddimer</b>
+			</label>
+			
+			<!-- Input Type Number -->
+			<input type="text"
+				id="Ddimer" name='Ddimer'
+				placeholder="Enter Ddimer Value" required />
+		</div>
+
+<!-- 		<div class="form-control-blood-sample">
+			<label for="comment">
+				<b>Any Other Concerns</b>
+			</label>
+
+			<textarea name="comment" id="comment"
+				placeholder="Enter your comment here">
+			</textarea>
+		</div>
+ -->
+		<!-- Multi-line Text Input Control -->
+		<div>
+			<button class='form-blood-sample' type="submit" value="submit">
+				<b>Submit</b>
+			</button>
+			<a class='btn form-blood-sample' href="{{url_for('home')}}"><strong>Go back</strong></a>
+		</div>
+		
+	</form>
+</div>
+
+{% endblock %}

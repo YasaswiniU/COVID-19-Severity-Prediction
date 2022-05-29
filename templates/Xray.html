@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Xray{% endblock %}
+{% block content %}
+	<h1 style="margin-top: 100px;color: white;">Chest X-Ray Upload Form</h1>
+
+	<!-- Create Form -->
+	<form class='xray-form center' method="post" enctype="multipart/form-data">
+
+        <div class="form-control-blood-sample">
+            <label for="name" id="label-name">
+                <b>Name</b>
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text"
+                id="name" name='name'
+                placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-control-blood-sample">
+            <label for="img" id="label-name">
+                <b>Upload Image</b>
+            </label>
+
+            <input class='xray-form-input' type="file" id="img" name="img" accept="image/png, image/jpeg" style="font-size: medium;font-weight: bold;"  required>
+        </div>        
+
+        
+        <div>
+            <input class='xray-form-input btn' type="submit" />
+            <a class='btn form-blood-sample' href="{{url_for('home')}}" style="width:50%;margin-left: 150px;"><strong>Go back</strong></a>
+
+        </div>
+    </form>
+{% endblock %}
+

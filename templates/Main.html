@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="container form-data">
+    <div class="row h-100">
+        <div class="col-sm-12 align-self-center">
+            <div class="card card-block w-50 mx-auto">
+              <h1 class='align-self-center'>COVID-19 SURVIVAL PREDICTION</h1>
+              <div class="card-body align-self-center">
+                <div class="upload-btn">
+                  <a class="btn btn-lg btn-dark" href="{{url_for('blood_samples')}}" >UPLOAD BLOOD SAMPLE DATA</a>
+                </div>
+
+                <div class="upload-btn">
+                  <a class="btn btn-lg btn-dark" href="{{url_for('chest_xray')}}" >UPLOAD CHEST XRAY IMAGE</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+<!-- <div class='card d-flex justify-content-center'>
+  <h1  style="color:white;">SURVIVAL PREDICTION</h1>
+
+  <div>
+    <a type="button" href="{{url_for('blood_samples')}}" >Upload Blood Samples Data</a>
+  </div>
+
+  <div>
+    <a type="button" >Upload Chest X-Ray Report</a>
+  </div>
+
+</div> -->
+
+{% endblock %}
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrg9V98ha_ZbIPG1oFS64DEDRUCH4LKsuvUA&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+		background-color: rgb(190, 205, 223);
+		font-family: Verdana;
+		text-align: center;
+	}
+    
+a[type=button]{
+  background-color: #121214;
+  border: 2px solid rgb(236, 209, 209);
+  border-radius: 7px;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 20px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1  style="color:white; margin-top: 150px;">SURVIVAL PREDICTION</h1>
+
+<div><a type="button" href="{{url_for('blood_samples')}}" >Upload Blood Samples Data</a></div>
+<div><a type="button" >Upload Chest X-Ray Report</a></div>
+
+
+</body>
+</html>
+ -->
